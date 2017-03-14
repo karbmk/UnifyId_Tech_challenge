@@ -12,8 +12,8 @@ for i in range(0,len(words),3):
     list_tuple.append(tuple(words[i:i+3]))#converts the number in list to tuples of 3
 
 list_rgb=[]
-for i in range(0,len(l),128):
-    list_rgb.append(list(l[i:i+128]))#converts the list of tuple to 128X128 pixel array
+for i in range(0,len(list_tuple),128):
+    list_rgb.append(list(list_tuple[i:i+128]))#converts the list of tuple to 128X128 pixel array
 
 imarray = numpy.array(list_rgb)
 im = Image.fromarray(imarray.astype('uint8')).convert('RGBA')
